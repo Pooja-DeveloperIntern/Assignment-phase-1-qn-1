@@ -1,0 +1,54 @@
+//Create a table for students with name,age,mobile,regno.,yearofbatch as columns//
+Create TABLE IF NOT EXISTS STUDENTS(
+Student_Name Varchar(40)NOT NULL,
+Mobile  INT (15) NOTNULL,
+Reg no INT(15) NOTNULL,
+year of batch YEAR,
+Age Varchar(2),
+);
+
+// Create a table for teachers with name, domain, department as column//
+Create TABLE IF NOT EXISTS Teachers(
+Name Varchar(40) NOT NULL,
+Domain Varchar(40) NOT NULL,
+Department Varchar(40) NOTNULL,
+);
+
+//Write a query to insert 10 students data and 10 teachers data in the respective table//
+INSERT INTO STUDENTS(
+Values (ABCD,04312715108,212001,2022,18)
+Values (ABCDE,0476476515108,212002,2022,18)
+Values (ABCDEF,0436746715108,212003,2020,21)
+Values (ABCDEFG,04312717447608,212004,2022,18)
+Values (ABCDEFGH,0431271517476,212005,2022,18)
+Values (ABCDEFGHI,0431271576468,212006,2022,18)
+Values (ABCDEFGHIJ,043127157538,212007,2020,20)
+Values (ABCDEFGHIJK,04312712647608,212008,2022,18)
+Values (ABCDEFGHIJKL,04312715143736,212009,2022,18)
+Values (ABCDEFGHIJKLM,0431271510874,21200,2020,21)
+);
+
+//Write a query to fetch all the students from 2020 batch//
+SELECT * FROM STUDENTS WHERE YEAR OF BATCH LIKE
+'2020'OR'20%"
+);
+
+//Write a query to fetch all teachers from CS department//
+SELECT * FROM TEACHERS WHERE DEPARTMENT LIKE
+'CS'OR'CSE'
+);
+
+//Write a query to edit at least 3 records of students//
+ALTER TABLE STUDENTS
+MODIFY(NAME,.....NOT NULL,
+       YEAR OF BATCH,...NOT NULL,
+       REG NO,...NOT NULL)
+);
+
+//Write a query to delete 2 records from teachers table.//
+DELETE TOP(20)PERCENT 
+FROM TEACHERS,TEACHERS
+         OR
+DELETE FROM TEACHERS WHERE ID IN 
+(SELECT * FROM TABLE WHERE ID=' ')
+);
